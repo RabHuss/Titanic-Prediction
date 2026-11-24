@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Family Status | Titanic</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<header class="navbar">
+    <a href="/" class="brand">TITANIC<span>AI</span></a>
+    <nav><a href="/">← Dashboard</a></nav>
+</header>
+
+<main class="form-container">
+
+    <div class="form-heading">
+        <span class="eyebrow">MODEL 02</span>
+        <h1>Family Status Prediction</h1>
+        <p>Find out whether the passenger is predicted to have travelled alone or with family.</p>
+    </div>
+
+    <form method="POST" action="{{ url_for('family_status') }}"
+          class="prediction-form">
+
+        <div class="form-grid">
+
+            <div class="form-group">
+                <label>Sex</label>
+                <select name="sex" required>
+                    <option value="">Select sex</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Passenger Class</label>
+                <select name="pclass" required>
+                    <option value="">Select class</option>
+                    <option value="1">First Class</option>
+                    <option value="2">Second Class</option>
+                    <option value="3">Third Class</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Age</label>
+                <input type="number" name="age" min="0" max="100"
+                       step="0.1" placeholder="e.g. 30" required>
+            </div>
+
+            <div class="form-group">
+                <label>Fare Paid (£)</label>
+                <input type="number" name="fare" min="0" step="0.01"
+                       placeholder="e.g. 25.50" required>
+            </div>
+
+            <div class="form-group full-width">
+                <label>Port of Embarkation</label>
+                <select name="embarked" required>
+                    <option value="">Select port</option>
+                    <option value="S">Southampton (S)</option>
+                    <option value="C">Cherbourg (C)</option>
+                    <option value="Q">Queenstown (Q)</option>
+                </select>
+            </div>
+
+        </div>
+
+        <button type="submit" class="primary-btn full-btn">
+            Predict Family Status →
+        </button>
+
+    </form>
+
+    {% if result is not none %}
+    <div class="result-card">
+        <span class="result-label">PREDICTION RESULT</span>
+        <h2>{{ result }}</h2>
+        <p>The model predicts the passenger's family-travel category.</p>
+    </div>
+    {% endif %}
+
+    <a href="/" class="back-link">← Return to Dashboard</a>
+
+</main>
+
+<footer>
+    <p>© 2026 Titanic Prediction System</p>
+</footer>
+
+</body>
+</html>
+s

@@ -1,0 +1,378 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap');
+
+:root {
+    --navy: #071a32;
+    --blue: #123c65;
+    --gold: #e8b75b;
+    --white: #ffffff;
+    --muted: #718096;
+    --background: #f3f6fa;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--background);
+    color: var(--navy);
+    min-height: 100vh;
+}
+
+.navbar {
+    background: var(--navy);
+    color: white;
+    padding: 20px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.brand {
+    color: white;
+    font-size: 24px;
+    font-weight: 800;
+    text-decoration: none;
+    letter-spacing: 2px;
+}
+
+.brand span {
+    color: var(--gold);
+}
+
+.navbar nav {
+    display: flex;
+    gap: 25px;
+}
+
+.navbar nav a {
+    color: #dce6f2;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.navbar nav a:hover {
+    color: var(--gold);
+}
+
+.hero {
+    min-height: 430px;
+    background: linear-gradient(115deg, #071a32, #16466d);
+    color: white;
+    padding: 75px 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.hero-content {
+    max-width: 590px;
+}
+
+.eyebrow {
+    color: var(--gold);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 3px;
+}
+
+.hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(35px, 5vw, 55px);
+    line-height: 1.15;
+    margin: 20px 0;
+}
+
+.hero p {
+    color: #d4e1ed;
+    line-height: 1.8;
+    max-width: 520px;
+    margin-bottom: 30px;
+}
+
+.hero-image {
+    text-align: center;
+    min-width: 220px;
+}
+
+.ship-illustration {
+    font-size: 130px;
+    filter: drop-shadow(0 15px 15px #0005);
+}
+
+.hero-caption {
+    color: var(--gold);
+    font-size: 12px;
+    letter-spacing: 3px;
+    margin-top: 12px;
+}
+
+.primary-btn {
+    display: inline-block;
+    background: var(--gold);
+    color: var(--navy);
+    border: none;
+    border-radius: 8px;
+    padding: 15px 25px;
+    font-size: 14px;
+    font-weight: 800;
+    text-decoration: none;
+    cursor: pointer;
+    transition: .25s;
+}
+
+.primary-btn:hover {
+    background: white;
+    transform: translateY(-2px);
+}
+
+.container {
+    max-width: 1150px;
+    margin: auto;
+    padding: 70px 25px;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-heading h2,
+.info-section h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    margin: 12px 0;
+}
+
+.section-heading p {
+    color: var(--muted);
+}
+
+.model-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.model-card {
+    background: white;
+    padding: 32px;
+    border-radius: 15px;
+    border: 1px solid #e4eaf1;
+    box-shadow: 0 8px 25px #102b4610;
+    transition: .25s;
+}
+
+.model-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 35px #102b4620;
+}
+
+.card-icon {
+    font-size: 38px;
+    margin-bottom: 18px;
+}
+
+.model-card h3 {
+    font-size: 21px;
+    margin-bottom: 12px;
+}
+
+.model-card p {
+    color: var(--muted);
+    line-height: 1.7;
+    min-height: 50px;
+    margin-bottom: 20px;
+}
+
+.card-link {
+    color: #16558a;
+    text-decoration: none;
+    font-weight: 800;
+    font-size: 14px;
+}
+
+.card-link:hover {
+    color: #c18b32;
+}
+
+.info-section {
+    background: white;
+    border-radius: 15px;
+    margin-top: 55px;
+    padding: 35px;
+    line-height: 1.8;
+    color: var(--muted);
+}
+
+.info-section h2 {
+    color: var(--navy);
+}
+
+.form-container {
+    max-width: 780px;
+    margin: 55px auto;
+    padding: 0 22px;
+}
+
+.form-heading {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.form-heading h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    margin: 12px 0;
+}
+
+.form-heading p {
+    color: var(--muted);
+    line-height: 1.7;
+}
+
+.prediction-form {
+    background: white;
+    border-radius: 16px;
+    padding: 35px;
+    box-shadow: 0 10px 35px #102b4610;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 22px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+
+.form-group label {
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #dce4ed;
+    border-radius: 8px;
+    background: #fbfcfe;
+    font-family: inherit;
+    font-size: 14px;
+    outline: none;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: #28699e;
+    box-shadow: 0 0 0 3px #28699e18;
+}
+
+.full-width {
+    grid-column: 1 / -1;
+}
+
+.full-btn {
+    width: 100%;
+    margin-top: 28px;
+}
+
+.result-card {
+    background: #e7f4ed;
+    border: 1px solid #b9dfc8;
+    border-radius: 13px;
+    padding: 28px;
+    text-align: center;
+    margin-top: 25px;
+}
+
+.result-label {
+    color: #27764b;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.result-card h2 {
+    color: #155b37;
+    font-family: 'Playfair Display', serif;
+    font-size: 30px;
+    margin: 12px 0;
+}
+
+.result-card p {
+    color: #42765b;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.back-link {
+    display: block;
+    margin-top: 25px;
+    color: #16558a;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+footer {
+    background: var(--navy);
+    color: #cbd6e3;
+    text-align: center;
+    padding: 24px;
+    font-size: 12px;
+}
+
+@media (max-width: 650px) {
+    .navbar {
+        padding: 18px 5%;
+    }
+
+    .navbar nav {
+        gap: 12px;
+    }
+
+    .hero {
+        padding: 55px 7%;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-image {
+        min-width: auto;
+    }
+
+    .ship-illustration {
+        font-size: 90px;
+    }
+
+    .model-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .full-width {
+        grid-column: auto;
+    }
+
+    .prediction-form {
+        padding: 22px;
+    }
+
+    .form-heading h1 {
+        font-size: 29px;
+    }
+}

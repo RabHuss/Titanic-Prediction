@@ -1,0 +1,101 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Titanic | Prediction Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<header class="navbar">
+    <a href="/" class="brand">TITANIC<span>AI</span></a>
+    <nav>
+        <a href="/">Home</a>
+        <a href="#models">Prediction Models</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <div class="hero-content">
+        <span class="eyebrow">MACHINE LEARNING PROJECT</span>
+        <h1>Discover the Story Behind Every Passenger.</h1>
+        <p>
+            Explore the Titanic dataset using machine learning.
+            Predict survival, passenger age, family status and passenger class.
+        </p>
+        <a href="#models" class="primary-btn">Explore Predictions →</a>
+    </div>
+
+    <div class="hero-image">
+        <div class="ship-illustration">🚢</div>
+        <div class="hero-caption">RMS TITANIC · 1912</div>
+    </div>
+</section>
+
+<main class="container" id="models">
+
+    <div class="section-heading">
+        <span class="eyebrow">INTELLIGENT PREDICTIONS</span>
+        <h2>Choose Your Prediction Model</h2>
+        <p>Select a machine-learning model to begin.</p>
+    </div>
+
+    <div class="model-grid">
+
+        <article class="model-card">
+            <div class="card-icon">❤️</div>
+            <h3>Survival Prediction</h3>
+            <p>Estimate whether a passenger survived the Titanic disaster.</p>
+            <a href="{{ url_for('survival') }}" class="card-link">
+                Start Prediction →
+            </a>
+        </article>
+
+        <article class="model-card">
+            <div class="card-icon">👨‍👩‍👧‍👦</div>
+            <h3>Family Status</h3>
+            <p>Predict whether a passenger travelled alone or with family.</p>
+            <a href="{{ url_for('family_status') }}" class="card-link">
+                Start Prediction →
+            </a>
+        </article>
+
+        <article class="model-card">
+            <div class="card-icon">🎂</div>
+            <h3>Age Prediction</h3>
+            <p>Estimate a passenger's age from available passenger details.</p>
+            <a href="{{ url_for('age') }}" class="card-link">
+                Start Prediction →
+            </a>
+        </article>
+
+        <article class="model-card">
+            <div class="card-icon">🚢</div>
+            <h3>Passenger Class</h3>
+            <p>Predict whether a passenger belongs to first, second or third class.</p>
+            <a href="{{ url_for('pclass') }}" class="card-link">
+                Start Prediction →
+            </a>
+        </article>
+
+    </div>
+
+    <section class="info-section">
+        <h2>About This Project</h2>
+        <p>
+            Titanic AI is a machine-learning demonstration built with Python,
+            Flask and Scikit-learn. It uses four trained models to explore
+            different passenger characteristics from the Titanic dataset.
+        </p>
+    </section>
+
+</main>
+
+<footer>
+    <p>© 2026 Titanic Prediction System | Machine Learning Project</p>
+</footer>
+
+</body>
+</html>
