@@ -1,10 +1,5 @@
-flask
-gunicorn
+Flask
 pandas
 numpy
-scikit-learn
-pickle
-jinja2
-werkzeug
-markupsafe
-itsdangerous
+scikit-learn==1.6.1
+gunicorn
