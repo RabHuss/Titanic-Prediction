@@ -4,3 +4,7 @@ pandas
 numpy
 scikit-learn
 pickle
+jinja2
+werkzeug
+markupsafe
+itsdangerous
